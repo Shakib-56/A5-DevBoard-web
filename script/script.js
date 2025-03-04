@@ -16,4 +16,15 @@ for(let i=1;i<=6;i++){
 
 }
 
+// clear history
+document.getElementById('history-btn').addEventListener('click',function(){
+  const container=document.getElementById('history-text-container');
+  container.innerHTML=" ";
+
+})
+
+document.getElementById('theme-btn').addEventListener('click',function(event){
+  event.preventDefault();
+  colorModeChange('html');
+})
 

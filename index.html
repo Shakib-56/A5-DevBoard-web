@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,10 +34,10 @@
 
      
 </head>
-<body class="font-poppins">
-    <header>
+<body id='body' class="font-poppins">
+    <header class="bg-transparent">
         <nav class="font-poppins">
-            <div class="navbar max-w-screen-xl px-20 py-4 mx-auto mt-6 rounded-xl bg-white shadow-lg">
+            <div class="navbar max-w-screen-xl px-20 py-4 mx-auto mt-4  rounded-xl mb-4 bg-white shadow-lg">
                 <div class=" flex items-center gap-2 ml-2 flex-row flex-1">
                     <div>
                         <img class="w-full h-10" src="./assets/logo.png" alt="">
@@ -50,7 +50,7 @@
                         <p id="updated-task" class="font-bold text-2xl">23</p>
                     </div>
                     
-                    <button class="bg-sky-100 p-3 h-14 w-14 rounded-full" >
+                    <button id="theme-btn" class="bg-sky-100 p-3 h-14 w-14 rounded-full" >
                         <img class="w-12 h-8" src="./assets/theme-btn.png" alt="">
                     </button>
                 </div>
@@ -252,7 +252,7 @@
                                 <h2 class="text-2xl">Activity Log</h2>
                             </div>
                             <div class=" text-center">
-                                <button class="px-8 py-4 bg-blue-700  border-none text-white text-lg rounded-lg">Clear History</button>
+                                <button id="history-btn" class="px-8 py-4 bg-blue-700  border-none text-white text-lg rounded-lg">Clear History</button>
                             </div>
                             <div id="history-text-container" class="flex flex-col">
 

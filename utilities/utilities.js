@@ -11,19 +11,6 @@ function showingTitleWithCurrentDate(id){
 
 }
 
-
-// function formatTime(number) {
-//    return number < 10 ? '0' + number : number;
-// }
-// function localTime(){
-//    let now = new Date();
-//    let hours = formatTime(now.getHours());
-//    let minutes = formatTime(now.getMinutes());
-//    let seconds = formatTime(now.getSeconds());
-   
-//    console.log(`Current Time: ${hours}:${minutes}:${seconds}`);
-// }
-
 function localTime(){
 let now = new Date();
 let currentTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -49,6 +36,34 @@ function decrement(id){
    }
    
 }
+
+
+let currentColorIndex = 0;
+
+function colorModeChange(id) {
+   let colors = ['orange', 'amber', 'yellow', 'lime', 'green'];
+   const body = document.getElementById(id);
+
+   // Remove all existing bg- classes
+   body.className = '';  
+
+   // Add the new background color class
+   body.classList.add(`bg-${colors[currentColorIndex]}-200`);
+
+   // Move to the next color in the array
+   currentColorIndex = (currentColorIndex + 1) % colors.length;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
