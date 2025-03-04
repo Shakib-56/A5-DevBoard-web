@@ -4,8 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
+    <!-- install daisy UI -->
+     <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!-- Font added end -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                acent:'#3752FD'
+              },
+              fontFamily: {
+                'poppins': ['Poppins', 'sans-serif'], 
+              }
+    
+            }
+          }
+        }
+      </script>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- End daisy UI -->
+     <!-- font-awesome added -->
+     <script src="https://kit.fontawesome.com/f0b60f1cfc.js" crossorigin="anonymous"></script>
+
+     
 </head>
-<body>
+<body class="font-poppins">
+    <header>
+        <nav class="font-poppins">
+            <div class="navbar max-w-screen-lg px-20 py-4 mx-auto mt-6 rounded-xl bg-white shadow-lg">
+                <div class=" flex items-center gap-2 ml-2 flex-row flex-1">
+                    <div>
+                        <img class="w-full h-10" src="./assets/logo.png" alt="">
+                    </div>
+                  <a class="text-xl font-poppins">Dev<strong class="font-bold">Board</strong></a>
+                </div>
+                <div class="flex justify-between gap-6 p-4">
+                    <div class="flex items-center gap-4">
+                        <i class="fa-solid fa-square-check text-3xl text-[#3752FD]"></i>
+                        <p class="font-bold text-2xl">23</p>
+                    </div>
+                    
+                    <button>
+                        <img src="./assets/theme-btn.png" alt="">
+                    </button>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main >
+        <section >
+            <div id="container" class="max-w-screen-lg min-h-screen  mx-auto flex gap-4 mt-4 px-4 py-6 rounded-lg shadow-xl">
+                
+                <div class="max-w-9/12 rounded-lg bg-gray-50 max-h-full">
+                    <!-- task assign section -->
+                    <section>
+                        <div class="grid grid-cols-4 gap-2 py-4 px-4 border-dashed border-b-1  border-sky-200">
+                            <div class=" flex gap-4 items-center rounded-lg bg-sky-100">
+                                <div class="bg-white shadow-md rounded-full h-12 w-12 ml-2">
+                                    <i class="fa-solid text-center p-3 fa-square-check text-2xl text-[#3752FD]"></i>
+                                </div>
+                                <div class="flex flex-col">
+                                    <small>Task Assigned</small>
+                                    <strong>05</strong>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center  col-span-2 bg-linear-to-tr from-blue-700 to-blue-500
+                            rounded-lg">
+                                <div class="w-18 p-2">
+                                    <img class="w-16" src="./assets/board.png" alt="">
+                                </div>
+                                
+                                <p class="text-white">Discover Something <br> New Today!</p>
+                            </div>
+                            <div class="flex bg-sky-100 justify-around items-center rounded-lg gap-2">
+                                <div>
+                                    <img src="./assets/calender.png" alt="">
+                                </div>
+                                <p >Wed,<br><strong>Jul 28 2025</strong> </p>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <!-- card section -->
+                     <section>
+                        <div class="grid grid-cols-3 gap-3 mx-2 my-4 ">
+                            <div id="card-1" class="card  gap-2 flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="mx-2 mt-2 ">
+                                    <button class="px-4 py-2 bg-white text-gray-600  rounded-lg">ShopEase</button>
+                                  </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="p-2">
+                                        <h2 class="card-title my-2">Fix Mobile Button Issue </h2>
+                                        <p class="bg-white my-4 text-sm rounded-lg p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                            and ensure onClick works properly.</p> 
+                                    </div>
+                                  
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-4">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                              <div id="card-2" class="card  gap-2 flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="card-actions justify-start p-2">
+                                    <button class="px-4 py-2 bg-white text-gray-600 rounded-lg">CloudSync</button>
+                                  </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="p-2">
+                                        <h2 class="card-title my-2">Add Dark Mode</h2>
+                                        <p class="bg-white my-2 rounded-lg text-sm p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p> 
+                                    </div>
+                                  
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-8">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                              <div id="card-3" class="card  gap-2 flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="card-actions justify-start p-2">
+                                    <button class="px-4 py-2 bg-white text-gray-600 rounded-lg">SoftPay</button>
+                                  </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="p-2">
+                                        <h2 class="card-title my-1">Optimize  Home page </h2>
+                                        <p class="bg-white my-2 text-sm rounded-lg p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                            and ensure onClick works properly.</p> 
+                                    </div>
+                                  
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-4">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                              <div id="card-2" class="card  gap-1 flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="card-actions justify-start p-2">
+                                    <button class="px-4 py-2 bg-white text-gray-600 rounded-lg">Meta</button>
+                                  </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="p-2">
+                                    <h2 class="card-title my-1">Add new emoji 🤲</h2>
+                                    <p class="bg-white rounded-lg my-2 text-sm p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                        and ensure onClick works properly.</p>
+                                    </div>
+                                  
+                                    <div class="flex items-center p-2 justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-2">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                              <div id="card-2" class="card  gap-2 flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="card-actions justify-start p-2">
+                                    <button class="px-4 py-2 bg-white text-gray-600 rounded-lg">Google LLC</button>
+                                  </div>
+                                <div class="flex flex-col items-center ">
+                                    <div class="p-2">
+                                    <h2 class="card-title mb-1">Integrate OpenAI API </h2>
+                                    <p class="bg-white text-sm my-2 rounded-lg p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                                    </div>
+                                  
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-8">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                              <div id="card-2" class="card  flex flex-col items-start  bg-sky-100 max-w-65 ">
+                                <div class="card-actions justify-start p-2">
+                                    <button class="px-4 py-2 bg-white text-gray-600 rounded-lg">Glassdoar</button>
+                                  </div>
+                                <div class="flex flex-col items-center ">
+                                    <div class="p-2">
+                                    <h2 class="card-title mb-1">Improve Job searching </h2>
+                                    <p class="bg-white text-sm my-2 rounded-lg p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                                    </div>
+                                  
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex flex-col">
+                                            <small class="text-gray-600">Deadline</small>
+                                            <p class=" text-sm mr-1 text-nowrap font-bold">21 March 2025</p>
+                                        </div>
+                                        <div class="card-actions my-8">
+                                            <button class="px-4 py-2 border-none rounded-lg text-white bg-blue-600">Completed</button>
+                                          </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                              </div>
+                             
+                           
+                             
+                        </div>
+                        
+                     </section>
+                     <!-- card section end -->
+
+                </div>
+                <div class="w-3/12 rounded-lg bg-gray-50 ">
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
     
 </body>
 </html>
