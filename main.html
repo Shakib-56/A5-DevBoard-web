@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <!-- install daisy UI -->
+     <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!-- Font added end -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- End daisy UI -->
+     <!-- font-awesome added -->
+     <script src="https://kit.fontawesome.com/f0b60f1cfc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="bg-transparent">
+        <nav class="font-poppins">
+            <div class="navbar max-w-screen-xl px-20 py-4 mx-auto mt-4  rounded-xl mb-4 bg-white shadow-lg">
+                <div class=" flex items-center gap-2 ml-2 flex-row flex-1">
+                    <div>
+                        <img class="w-full h-10" src="./assets/logo.png" alt="">
+                    </div>
+                  <a class="text-xl font-poppins">Dev<strong class="font-bold">Board</strong></a>
+                </div>
+                <div>
+                    <button  class="bg-blue-700 px-4 py-2 my-2 mx-4 text-lg font-semibold text-white rounded-lg" >
+                        Back to Desk
+                    </button>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="text-4xl font-bold text-center my-4">Blog</h1>
+        <section class="my-6">
+            <div class="max-w-screen-xl min-h-screen mx-auto flex flex-col gap-4 ">
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-2xl font-semibold my-4 p-2 border-dashed border-b-1 border-gray-400 ">Question-1: What are the different ways to select an element in the DOM?
+
+                    </h1>
+                    <p>Different ways to select elements in the DOM include methods like getElementById(), querySelector(), and getElementsByClassName(), querySelectorAll() ,firstChild/last child each tailored for specific selection needs.</p>
+                </div>
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-2xl font-semibold my-4 p-2 border-dashed border-b-1 border-gray-400">Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                    </h1>
+                    <p>innerHTML includes HTML tags, innerText returns visible text with styles applied, and textContent returns all text, including hidden, without considering styles, offering better performance than innerText.</p>
+                </div>
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-2xl font-semibold my-4 p-2 border-dashed border-b-1 border-gray-400">Question-3: What is event delegation in the DOM?
+                    </h1>
+                    <p>Event Delegation involves adding a single event listener to a parent element instead of individual child elements. The event.target property helps identify the specific element that triggered the event.</p>
+                </div>
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-2xl font-semibold my-4 p-2 border-dashed border-b-1 border-gray-400">Question-4: What is event bubbling in the DOM?
+                    </h1>
+                    <p>Event bubbling in JavaScript is a process where an event triggered on a child element propagates upward to its parent elements. This allows parent elements to handle events triggered by child elements.<br>
+                        <span class="text-lg font-semibold">Event propagation in JavaScript occurs in two phases:</span>
+                    
+                    </p>
+                    <ul>
+                        <li><span class="text-lg font-semibold ">Capturing Phase:</span> The event starts from the root and propagates down to the target element.</li>
+                        <li><span class="text-lg font-semibold">Bubbling Phase:</span> After reaching the target, the event bubbles up from the target to the root.
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-white shadow-lg rounded-lg">
+                    <h1 class="text-2xl font-semibold my-4 p-2 border-dashed border-b-1 border-gray-400">Question-5: How do you create, add, and remove elements using JavaScript?
+                    </h1>
+                    <p>We can create elements with document.createElement(), add them using appendChild() or insertBefore(), and remove them with removeChild() or remove().</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
