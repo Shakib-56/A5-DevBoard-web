@@ -12,11 +12,13 @@ function showingTitleWithCurrentDate(id){
 }
 
 function localTime(){
-let now = new Date();
-let currentTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+let date = new Date();
+let currentTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 return currentTime;
 }
+
 // increment task
+
 
 function increment(id){
    const taskNumber=document.getElementById(id).innerText;

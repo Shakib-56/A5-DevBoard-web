@@ -35,3 +35,16 @@ document.getElementById('theme-btn').addEventListener('click',function(event){
 document.getElementById('discover-section').addEventListener('click',function(){
   window.location.href='main.html';
 })
+
+// Date set
+function loaclDate(){
+  let date=new Date();
+  let currentDate=date.toDateString();
+  return currentDate;
+}
+
+let date=loaclDate();
+document.getElementById('update-date').innerText=`${date}`;
+
+
+
